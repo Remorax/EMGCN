@@ -14,7 +14,7 @@ def parse_args():
     return parser.parse_args()
 
 def convert(args):
-    G_data = json.load(open(args.input_dir + "/graphsage/" + args.prefix +"-G.json", "r"))
+    G_data = json.load(open(args.input_dir + "/graphsage/G.json", "r"))
     G = json_graph.node_link_graph(G_data)
     if not os.path.exists(args.out_dir+ "/edgelist/"):
         os.makedirs(args.out_dir+ "/edgelist/")    
