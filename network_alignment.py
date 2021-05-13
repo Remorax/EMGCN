@@ -66,7 +66,7 @@ if __name__ == '__main__':
         raise Exception("Unsupported algorithm")
 
     S = model.align()
-
+    print (S, S.shape)
     for i in range(2):
         if i == 1: 
             print("right to left...")

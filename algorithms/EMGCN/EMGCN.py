@@ -251,7 +251,7 @@ class EMGCN(NetworkAlignmentModel):
         print("Done structural training")
 
         embedding_model.eval()
-        
+        self.att_simi_matrix, self.value_simi_matrix = self.get_simi_att()        
         att_simi_matrix = self.att_simi_matrix + self.value_simi_matrix
         source_A_hat = source_A_hat.to_dense()
         target_A_hat = target_A_hat.to_dense()
